@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'customFilters' // This is known as 'declaring a dependency'
+    'customFilters', // This is known as 'declaring a dependency'
+    'cart'
   ])
   .config(function ($routeProvider) {
     $routeProvider
