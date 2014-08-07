@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Spirit Shop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -32,11 +33,10 @@
     <!-- / Addressing Errors in failed AJAX requests /-->
     <div class="alert alert-danger" ng-show="data.error">
       Error ({{data.error.status}}). The product data was not loaded. (Start the server)
-      <a href "/app.html" class="alert-link">Click here to try again</a>
+      <a href "/index.html" class="alert-link">Click here to try again</a>
     </div>
     <!-- / / -->
-
-    <ng-include src="'views/productList.html'"></ng-include>
+    <ng-view></ng-view>
 
      <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
