@@ -25,8 +25,40 @@
       </span>
     </div>
 
+    <div class="form-group">
+      <label>City</label>
+      <input name="city" class="form-control" ng-model="data.shipping.city" required />
+      <span class="error" ng-show="shippingForm.city.$error.required"> 
+        Please enter a city
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label>Provice</label>
+      <input name="province" class="form-control" ng-model="data.shipping.province" required />
+      <span class="error" ng-show="shippingForm.province.$error.required"> 
+        Please enter a province
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label>Postal Code</label>
+      <input name="postalcode" class="form-control" ng-model="data.shipping.postalcode" required />
+      <span class="error" ng-show="shippingForm.postalcode.$error.required"> 
+        Please enter a postal code
+      </span>
+    </div>
+
+    <h3>Options</h3>
+    <div class-"checkbox">
+      <label>
+        <input name="giftwrap" type="checkbox" ng-model="data.shipping.giftwrap" />
+        Gift wrap these items
+      </label>
+    </div>
+
     <div class="text-center">
-      <button ng-disabled="shippingForm.$invalid" class="btn btn-primary">Place order</button>
+      <button ng-disabled="shippingForm.$invalid" ng-click="sendOrder(data.shipping)" class="btn btn-primary">Place order</button>
     </div>  
   </div>
 </form>
