@@ -21,9 +21,14 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
+      .when('/complete', {
+        templateUrl: 'views/thankYou.html'
+      })
+      .when('/placeorder', {
+        templateUrl: 'views/placeOrder.html'
+      })
       .when('/checkout', {
-        templateUrl: 'views/checkoutSummary.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/checkoutSummary.html'
       })
       .when('/products', {
         templateUrl: 'views/productList.html'
