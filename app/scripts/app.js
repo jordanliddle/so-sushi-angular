@@ -40,3 +40,19 @@ angular
         templateUrl: 'views/productList.html'
       });
   });
+
+angular.module('spiritShopAdmin', ['ngRoute'])
+      .config(function ($routeProvider) {
+
+        $routeProvider.when('/login', {
+          templateUrl: '/views/adminLogin.html'
+        });
+
+        $routeProvider.when('/main', {
+          templateUrl: '/views/adminMain.html'
+        });
+
+        $routeProvider.otherwise( {
+          redirectTo: '/login'
+        });
+      });  
