@@ -16,6 +16,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'ngFx',
     'customFilters', // This is known as 'declaring a dependency'
     'cart'
   ])

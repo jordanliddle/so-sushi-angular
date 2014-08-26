@@ -16,7 +16,7 @@ body {
   padding-bottom: 20px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
+
 .header,
 .marketing,
 .footer {
@@ -74,18 +74,18 @@ body {
     max-width: 730px;
   }
 
-  /* Remove the padding we set earlier */
+
   .header,
   .marketing,
   .footer {
     padding-left: 0;
     padding-right: 0;
   }
-  /* Space out the masthead */
+
   .header {
     margin-bottom: 30px;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
+
   .jumbotron {
     border-bottom: 0;
   }
@@ -95,3 +95,13 @@ body {
 .ng-invalid { background-color: lightpink; }
 .ng-valid { background-color: lightgreen; }
 span.error { color: red; font-weight: bold; } 
+
+/* Animations */ 
+
+.cart-item.ng-leave {
+  -webkit-animation: fadeOutRight 1s;
+  -moz-animation: fadeOutRight 1s;
+  -ms-animation: fadeOutRight 1s;
+  animation: fadeOutRight 1s;
+}
+
