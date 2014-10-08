@@ -32,6 +32,14 @@
 			"required": true,
 			"id": "price",
 			"order": 3
+		},
+		"image": {
+			"name": "image",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "image",
+			"order": 4
 		}
 	}
 }
