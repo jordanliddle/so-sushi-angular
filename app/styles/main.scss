@@ -3,6 +3,11 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 // endbower
 
+$goldy:    #bbad95;
+$boldtext: 'Open sans',Helvetica,Arial,sans-serif;;
+$hotred: #9E2B40;
+
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -16,6 +21,20 @@ body {
   padding-bottom: 20px;
 }
 
+li {
+display: list-item;
+text-align: -webkit-match-parent;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+}
 
 .header,
 .marketing,
@@ -37,10 +56,49 @@ body {
   }
 }
 
+.navbar-brand {
+  font-family: 'Kaushan Script', sans-serif;
+  font-size: 20px;
+  color: $goldy;
+  padding: 15px 20px 0 17px;
+
+}
+
+.header-nav {
+  padding: 0 10px;
+  background-image: url("/images/asfalt.png");
+  border-bottom: 1px solid #000;
+  letter-spacing: .07em;
+  // border: none;
+}
+
+.header-nav ul {
+  font-family: $goldy;
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 17px;
+  margin: 0 0 0 -20px;
+  list-style: none;
+  float: left;
+}
+
+.header-nav li {
+  float: left;
+  padding: 0 20px 0 17px;
+  color: white;
+  position: relative;
+  background: url("/images/divider.png") no-repeat 0 50%;
+}
+
+.panel {
+  background-image: url("/images/asfalt.png");
+}
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
-  color: #777;
+  color: black;;
   border-top: 1px solid #e5e5e5;
 }
 
@@ -50,8 +108,13 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
+  position: relative;
   text-align: center;
+  background-image: url("/images/asfalt.png");
   border-bottom: 1px solid #e5e5e5;
+  border-top: 1px solid #343434;
+  height: 300px;
+  margin-bottom: 0px;
 
   .btn {
     font-size: 21px;
@@ -87,7 +150,20 @@ body {
   }
 
   .jumbotron {
-    border-bottom: 0;
+    display: block;
+    border-top: 1px solid red;
+    border-bottom: 0px;
+    background-image: url("/images/dark_wood.png");
+    
+    h1 {
+      font-family: 'Kaushan Script', sans-serif;
+      margin-top: 50px;
+      color: $goldy;
+    }
+
+    p {
+      margin-top: 25px;
+    }    
   }
 }
 
@@ -104,4 +180,99 @@ span.error { color: red; font-weight: bold; }
   -ms-animation: fadeOutRight 1s;
   animation: fadeOutRight 1s;
 }
+
+.item-description {
+  margin-left: 15px;
+  h3 {
+    font-family: $boldtext;
+    font-weight: 800;
+    color: white;
+  }
+  .lead {
+    font-size: 15px;
+    padding-right: 30px;
+  }
+
+  .price {
+    font-weight: 400;
+    color: $hotred;
+    font-size: 17px;
+  }
+}
+
+.item-info { 
+  border: 1px solid #131313;
+  border-top-color: rgb(19, 19, 19);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-right-color: rgb(19, 19, 19);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-bottom-color: rgb(19, 19, 19);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: rgb(19, 19, 19);
+  border-left-style: solid;
+  border-left-width: 1px;
+  box-shadow: inset 0 1px 0 #292929;
+  padding: 20px;
+  margin-top: 20px;
+  background: #0a0a0a;
+}
+
+.item-selection {
+  margin: 20px;
+  border: 1px solid #131313;
+}
+
+a.list-group-item {
+  background: #0a0a0a;
+  border: 1px solid #131313;
+  font-family: $boldtext;
+  font-weight: 800;
+  color: $goldy;
+  margin-left: 20px
+}
+
+
+.home {
+    box-shadow: inset 0 1px 0 #292929;
+  }
+
+.navbar-right { 
+  float: right !important; 
+  margin-right: 5px; 
+  font-family: $boldtext;
+
+}
+
+.navbar-text { margin-right: 10px; }
+
+// .btn {
+//     border-radius: 3px;
+//     width: 99px;
+//     height: 30px;
+//     font: 13px/33px $boldtext;
+//     color: #141515;
+//     text-shadow: 1px 1px 0 #bcb2a0;
+//     padding: 0 4px 1px 0;
+//     margin-left: 20px;
+//     border: 0;
+//     cursor: pointer;
+//     // float: left;
+//     background: linear-gradient(to bottom,#b9ad98 0,#a69a85 100%);
+// }
+
+.cart-summary {
+  .btn {
+    margin-left: 0px;
+  }
+}
+
+.pagination {
+  .btn {
+    width: 40px;
+  }
+}
+
 

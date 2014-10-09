@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('spiritshopApp')
-  .constant('productListActiveClass', 'btn-primary')
+  .constant('productListActiveClass', 'active')
   .constant('productListPageCount', 3)
   .controller('productListCtrl', function($scope, $filter, productListActiveClass, productListPageCount, cart) { //declaring a dependency
 
