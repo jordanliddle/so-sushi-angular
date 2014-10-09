@@ -1,0 +1,38 @@
+<div class="jumbotron">
+  <h1>A Delicious AngularJS Project</h1>
+    <p>About | Order Sushi </p>
+    <!-- <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p> -->
+</div>
+<div class="panel panel-default row" ng-controller="productListCtrl" ng-hide="data.error">
+      <div class="col-xs-3 item-selection">
+        <a ng-click="selectCategory()" class="list-group-item home">Home</a>
+        <a ng-repeat="item in data.products | orderBy:'category' | unique:'category'" ng-click="selectCategory(item)" class="list-group-item" ng-class="getCategoryClass(item)">{{item}}</a>
+      </div>
+      <div class="col-xs-8">
+          <div class="row well item-info fx-fade-right fx-speed-800" ng-repeat="item in data.products | filter:categoryFilterFn | range:selectedPage:pageSize">
+      
+            <div class="col-xs-2">
+              <img src={{item.image}} alt="Smiley face" height="120" width="120">
+            </div>
+            
+            <div class="col-xs-10">
+              <div class="item-description">
+                <h3>
+                  <strong>{{item.name}}</strong>
+                  <span class="pull-right price">
+                    {{item.price | currency}}
+                  </span>
+                </h3>
+                <button ng-click="addProductToCart(item)" class="btn btn-success pull-right">Add to Cart</button>
+                <span class="lead">{{item.description}}</span>
+              </div>
+            </div>
+          </div>
+        <div class="pull-right btn-group pagination">
+          <a ng-repeat="page in data.products | filter:categoryFilterFn | pageCount:pageSize"
+          ng-click="selectPage($index + 1)" class="btn btn-default" ng-class="getPageClass($index + 1)">
+          {{$index + 1}}
+          </a>
+        </div>
+    </div>
+</div>
