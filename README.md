@@ -9,7 +9,7 @@ Spirit shop utilizes [Yeoman](http://yeoman.io/), [GruntJS](http://gruntjs.com/)
 SpiritShop is an ongoing project as I learn the advanced features of AngularJS. 
 
 
-To see SpiritShop live, click [here](#) 
+To see SpiritShop live, use Deployd port 5500 (dpd -p 5500 spiritshop/app.dpd) 
 
 
 Thanks for checking out my work! 
